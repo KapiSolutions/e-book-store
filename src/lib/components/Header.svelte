@@ -9,7 +9,7 @@
 	<Navbar />
 	<section class="container">
 		<div class="textContainer">
-			<h1>Twój E<span class="accent">-</span>book</h1>
+			<h1><span class="accent">.</span>Twój E-book</h1>
 			<p>
 				Poszerz swoje horyzonty z naszymi e-bookami! Unikalna wiedza w zasięgu jednego kliknięcia!
 			</p>
@@ -29,8 +29,9 @@
 	}
 	h1 {
 		font-family: var(--font-decoration);
-		font-size: 42px;
+		font-size: 52px;
 		margin-bottom: 16px;
+		text-transform: uppercase;
 	}
 	.accent {
 		color: var(--color-theme-1);
