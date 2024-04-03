@@ -1,11 +1,12 @@
-<svelte:head>
-	<title>About</title>
-	<meta name="description" content="About this app" />
-</svelte:head>
+<script>
+	import HeaderText from '$lib/components/HeaderText.svelte';
+	import SEO from '$lib/components/SEO.svelte';
+</script>
+
+<SEO title={'Kontakt'} description={'Strona kontaktowa'} />
 
 <div class="text-column">
-	<h1>About this app</h1>
-
+	<HeaderText title="Kontakt" />
 	<p>
 		This is a <a href="https://kit.svelte.dev">SvelteKit</a> app. You can make your own by typing the
 		following into your command line and following the prompts:
