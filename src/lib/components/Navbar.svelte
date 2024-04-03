@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import { page } from '$app/stores';
 	import { goto } from '$app/navigation';
 	import scrollToElement from '$lib/utils/scrollToElement';
@@ -10,16 +10,26 @@
 			scrollToElement('top');
 		}
 	};
+	const handleShop = () => {
+		if ($page.url.pathname !== '/') {
+			goto('/#main');
+		} else {
+			scrollToElement('sklep');
+		}
+	};
 </script>
 
 <nav>
 	<button on:click={handleHome} class="logo"> Twój e<span class="accent">-</span>book!</button>
 	<ul>
-		<li aria-current={$page.url.pathname === '/about' ? 'page' : undefined}>
-			<button on:click={() => scrollToElement('sklep')}>SKLEP</button>
+		<li aria-current={$page.url.pathname === '/' ? 'page' : undefined}>
+			<button on:click={handleShop}>SKLEP</button>
 		</li>
-		<li aria-current={$page.url.pathname === '/about' ? 'page' : undefined}>
-			<button><a href="/about">KONTAKT</a></button>
+		<li aria-current={$page.url.pathname === '/o-nas' ? 'page' : undefined}>
+			<button on:click={() => goto('/o-nas#main')}>O NAS</button>
+		</li>
+		<li>
+			<button on:click={() => scrollToElement('footer')}>KONTAKT</button>
 		</li>
 	</ul>
 </nav>
@@ -64,8 +74,9 @@
 		position: relative;
 		height: 100%;
 	}
+
 	/* Active tab */
-	/* li[aria-current='page']::before {
+	li[aria-current='page']::before {
 		--size: 6px;
 		content: '';
 		width: 0;
@@ -75,7 +86,7 @@
 		left: calc(50% - var(--size));
 		border: var(--size) solid transparent;
 		border-top: var(--size) solid var(--color-theme-1);
-	} */
+	}
 
 	button {
 		display: flex;
@@ -95,15 +106,6 @@
 	}
 
 	button:hover {
-		color: var(--color-theme-1);
-	}
-	a {
-		text-decoration: none;
-		color: var(--color-text);
-		transition: color 0.2s linear;
-	}
-	a:hover {
-		text-decoration: none;
 		color: var(--color-theme-1);
 	}
 </style>
