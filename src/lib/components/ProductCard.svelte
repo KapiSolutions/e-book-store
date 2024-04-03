@@ -1,6 +1,7 @@
 <script lang="ts">
-	// import ebook from '$lib/images/e-book.webp';
 	import Button from './Button.svelte';
+	import { goto } from '$app/navigation';
+	import { productStore } from '$lib/stores/productStore';
 
 	const openUrlInNewTab = (url: string) => {
 		window.open(url, '_blank');
@@ -11,6 +12,13 @@
 	export let priceOld: number;
 	export let imageUrl: string;
 	export let buyUrl: string;
+	export let description: string;
+	export let buyMode: boolean = false;
+
+	const handleProduct = () => {
+		productStore.set({ title, price, priceOld, imageUrl, buyUrl, description });
+		goto(`/e-book/${title}#main`);
+	};
 </script>
 
 <div class="container">
@@ -22,7 +30,18 @@
 		<p class="oldPrice">{priceOld}.00 zł</p>
 		<p class="activePrice">{price}.00 zł</p>
 	</span>
-	<Button onClick={() => openUrlInNewTab(buyUrl)}>Kup teraz!</Button>
+	<div class="buttons">
+		{#if buyMode}
+			<Button onClick={() => goto('/#sklep')} variant="secondary">Wróć</Button>
+			<Button onClick={() => openUrlInNewTab(buyUrl)}>Kup teraz!</Button>
+		{:else}
+			<Button onClick={handleProduct} variant="secondary">Pokaż opis</Button>
+			<Button onClick={() => openUrlInNewTab(buyUrl)}>Kup teraz!</Button>
+		{/if}
+	</div>
+	<p>
+		<small>ZAKUP JEST JEDNOZNACZNY Z AKCEPTACJĄ <a href="/regulamin#main">REGULAMINU.</a></small>
+	</p>
 </div>
 
 <style>
@@ -31,19 +50,21 @@
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
+		text-align: center;
 	}
 	.imageContainer {
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		margin-top: 12px;
 	}
-	.price{
+	.price {
 		text-align: center;
 	}
 	.activePrice {
 		font-size: larger;
 		margin-bottom: 12px;
-		margin-top:6px;
+		margin-top: 6px;
 	}
 	.oldPrice {
 		text-decoration: line-through;
@@ -52,5 +73,9 @@
 	}
 	.image {
 		width: 150px;
+	}
+	.buttons {
+		display: flex;
+		gap: 16px;
 	}
 </style>

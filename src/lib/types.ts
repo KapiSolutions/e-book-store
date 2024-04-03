@@ -5,3 +5,12 @@ export interface ButtonProps {
 	disabled?: boolean;
 	loading?: boolean;
 }
+
+export interface Product {
+	title: string;
+	price: number;
+	priceOld: number;
+	imageUrl: string;
+	buyUrl: string;
+	description: string;
+}

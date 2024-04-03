@@ -5,11 +5,11 @@
 
 <div class="app">
 	<Header />
-	<main>
+	<main id="main">
 		<slot />
 	</main>
 
-	<footer>
+	<footer id="footer">
 		<p>© 2024 <a href="/#">Twój E-book</a></p>
 	</footer>
 </div>

@@ -38,6 +38,7 @@
 	"type": "module",
 	"dependencies": {
 		"@fontsource-variable/museomoderno": "^5.0.20",
+		"@fontsource/dm-serif-display": "^5.0.19",
 		"@fontsource/pacifico": "^5.0.12",
 		"@fontsource/poppins": "^5.0.13"
 	}
