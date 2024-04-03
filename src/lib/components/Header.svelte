@@ -11,7 +11,7 @@
 		<div class="textContainer">
 			<h1><span class="accent">.</span>Twój E-book</h1>
 			<p>
-				Poszerz swoje horyzonty z naszymi e-bookami! Unikalna wiedza w zasięgu jednego kliknięcia!
+				Poszerz swoje horyzonty z naszymi <br>E-bookami! Unikalna wiedza w zasięgu jednego kliknięcia!
 			</p>
 			<Button variant="cta" onClick={() => scrollToElement('sklep')}>Zobacz E-booki!</Button>
 		</div>
