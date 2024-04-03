@@ -32,9 +32,11 @@
 	}
 
 	.secondary {
-		border: 1px solid rgb(255, 0, 204);
-		padding: 16px 24px;
-		border-radius: 24px;
+		padding: 12px 18px;
+		border-radius: 12px;
+		color: var(--color-theme-1);
+		border: 1px solid var(--color-theme-1);
+		background-color: var(--color-bg);
 	}
 
 	.cta {
