@@ -5,7 +5,7 @@
 
 <SEO title={'Regulamin'} description={'Regulamin korzystania ze sklepu "Twój E-book"'} />
 
-<div class="text-column">
+<div class="container">
 	<HeaderText title="Regulamin" />
 	<div>
 		<span class="paragraph">
@@ -16,7 +16,7 @@
 
 		<ul>
 			<li>
-				Sklep - sklep internetowy prowadzony przez Agnieszkę Wąsik, działający pod adresem <a
+				Sklep - sklep internetowy prowadzony przez Agnieszkę Wąsik, działający pod adresem: <a
 					href="https://linktr.ee/twojebook10">https://twojebook.vercel.app</a
 				> ;
 			</li>
@@ -66,7 +66,7 @@
 			</li>
 
 			<li>
-				Treść Regulaminu jest dostępna na stronie Sprzedawcy <a href="https://twojebook.vercel.app"
+				Treść Regulaminu jest dostępna na stronie Sprzedawcy: <a href="https://twojebook.vercel.app"
 					>https://twojebook.vercel.app</a
 				>
 			</li>
@@ -100,7 +100,7 @@
 			</li>
 
 			<li>
-				Informacje o E-bookach zamieszczone są na stronie <a href="https://twojebook.vercel.app"
+				Informacje o E-bookach zamieszczone są na stronie: <a href="https://twojebook.vercel.app"
 					>https://twojebook.vercel.app</a
 				> .
 			</li>
@@ -202,7 +202,7 @@
 			<li>
 				W celu dokonania płatności, z chwilą złożenia zamówienia z obowiązkiem zapłaty, Klient
 				zostanie przekierowany na stronę internetową dostawcy systemu płatności on - line „Stripe".
-				Zasady dokonywania płatności on - line zostały wskazane na stronie <a
+				Zasady dokonywania płatności on - line zostały wskazane na stronie: <a
 					href="https://stripe.com/en-pl">https://stripe.com/en-pl</a
 				>
 			</li>
@@ -214,7 +214,7 @@
 			</li>
 
 			<li>
-				Faktura VAT wystawiana jest na wyraźne żądanie Klienta złożone w prywatnej wiadomości e-mail
+				Faktura VAT wystawiana jest na wyraźne żądanie Klienta złożone w prywatnej wiadomości e-mail:
 				( <a href="mailto:twojebook10@gmail.com">twojebook10@gmail.com</a> )
 			</li>
 
@@ -522,8 +522,6 @@
 			</li>
 		</ol>
 
-		<p><strong><i>Koniec regulaminu.</i></strong></p>
-
 		<br />
 		<span class="paragraph">
 			<p>Klauzula informacyjna dla odbiorców korespondencji elektronicznej</p>
@@ -636,6 +634,11 @@
 </div>
 
 <style>
+	.container {
+		max-width: 100vw;
+		word-break: break-word;
+		overflow-x: hidden;
+	}
 	.paragraph {
 		text-align: center;
 	}
