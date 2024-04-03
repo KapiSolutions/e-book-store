@@ -63,5 +63,6 @@
 	}
 	.description {
 		margin: 12px 0px;
+		text-align: justify;
 	}
 </style>

@@ -118,10 +118,15 @@
 			padding: 0 0.8rem;
 		}
 		ul {
-			padding: 0px 0px;
+			padding: 0;
 		}
 		nav {
-			padding: 0px 0px;
+			padding: 0;
+		}
+	}
+	@media screen and (max-width: 400px) {
+		.logo {
+			font-size: 10px;
 		}
 	}
 </style>
