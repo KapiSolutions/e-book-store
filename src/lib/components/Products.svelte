@@ -2,58 +2,17 @@
 	import HeaderText from './HeaderText.svelte';
 	import ProductCard from './ProductCard.svelte';
 	import products from '../../tmp/products.json';
+	import CountDown from './CountDown.svelte';
 </script>
 
 <div class="container" id="sklep">
 	<HeaderText title="Sklep" />
-	{#each products as product}
-		<ProductCard {...product} />
-	{/each}
-
 	<div>
-		<p>
-			Próbujesz podrywać kobiety, ale żadna nie chce z Tobą rozmawiać? Wszystkie dziewczyny, z
-			którymi masz kontakt, wydają się dziwne i nie w Twoim typie? Korzystasz ze schematycznych
-			technik podrywu, ale nie przyciągasz takich kobiet, jakich pragniesz?
-		</p>
-		<p>
-			Książka "Zdobądź mnie! Jak uwieść kobietę swoich marzeń?" oferuje praktyczne wskazówki
-			dotyczące budowania pewności siebie, rozmawiania z kobietami, czytania sygnałów niewerbalnych
-			oraz tworzenia niezapomnianych chwil. Zawiera również cenne porady na temat skutecznego
-			planowania randek. Odkryjesz tajniki sztuki uwodzenia, które pomogą Ci przyciągnąć uwagę i
-			zainteresowanie kobiety, której pragniesz.
-		</p>
-		<p>
-			Nasz niezawodny poradnik został <span>w 100% napisany przez kobietę</span>, bo kto lepiej wie,
-			czego pragną kobiety, jak nie sama kobieta? Dzięki naszemu e-bookowi zrozumiesz, w jaki sposób
-			myślą dziewczyny i czego oczekują od mężczyzn.
-		</p>
-		<p>
-			Gotowy na przygodę życia? Poznaj sekrety uwodzenia już dziś i zdobądź kobietę swoich marzeń!
-		</p>
-		<p>
-			<strong>ZAKUP E-BOOKA JEST RÓWNOZNACZNY Z AKCEPTACJĄ REGULAMINU!</strong>
-		</p>
-		<p>Co zawiera e-book “Zdobądź mnie! Jak uwieść kobietę swoich marzeń?”</p>
-		<p>Rozdziały:</p>
-		<ul>
-			<li>DZIESIĘCIU MĘŻCZYZN</li>
-			<li>ZACZNIJ OD SIEBIE</li>
-			<li>ZBUDUJ CIEKAWĄ OSOBOWOŚĆ</li>
-			<li>PIERWSZE WRAŻENIE</li>
-			<li>JAK SIĘ SPOTKAĆ? JAK ZAGADAĆ W RZECZYWISTOŚCI?</li>
-			<li>KALIBRACJA</li>
-			<li>JAK BUDOWAĆ NAPIĘCIE SEKSUALNE</li>
-			<li>JESTEM TWÓJ, ALE NIE JESTEM</li>
-			<li>CZERWONE FLAGI</li>
-			<li>DLACZEGO WARTO TRAKTOWAĆ KOBIETĘ LUKSUSOWO?</li>
-		</ul>
-		<p>Bonusowe rozdziały!</p>
-		<ul>
-			<li>🔥‍ JAK WYJŚĆ Z FRIENDZONE?</li>
-			<li>🔥‍ JAK ZAPOMNIEĆ O EX?</li>
-		</ul>
+		{#each products as product}
+			<ProductCard {...product} />
+		{/each}
 	</div>
+	<CountDown />
 </div>
 
 <style>
@@ -61,6 +20,6 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		flex-wrap: wrap;
+		flex-direction: column;
 	}
 </style>
