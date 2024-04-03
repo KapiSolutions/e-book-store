@@ -1,17 +1,16 @@
-<script>
+<script lang="ts">
 	import Header from '../lib/components/Header.svelte';
 	import './styles.css';
 </script>
 
 <div class="app">
 	<Header />
-
 	<main>
 		<slot />
 	</main>
 
 	<footer>
-		<p>visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to learn SvelteKit</p>
+		<p>© 2024 <a href="/#">Twój E-book</a></p>
 	</footer>
 </div>
 
