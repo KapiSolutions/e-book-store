@@ -13,15 +13,13 @@
 </script>
 
 <nav>
+	<button on:click={handleHome} class="logo"> Twój e<span class="accent">-</span>book!</button>
 	<ul>
-		<li aria-current={$page.url.pathname === '/' ? 'page' : undefined}>
-			<button on:click={handleHome}>Home</button>
+		<li aria-current={$page.url.pathname === '/about' ? 'page' : undefined}>
+			<button on:click={() => scrollToElement('sklep')}>SKLEP</button>
 		</li>
 		<li aria-current={$page.url.pathname === '/about' ? 'page' : undefined}>
-			<button on:click={() => scrollToElement('sklep')}>Sklep</button>
-		</li>
-		<li aria-current={$page.url.pathname === '/about' ? 'page' : undefined}>
-			<button><a href="/about">Kontakt</a></button>
+			<button><a href="/about">KONTAKT</a></button>
 		</li>
 	</ul>
 </nav>
@@ -33,22 +31,33 @@
 		left: 0px;
 		width: 100%;
 		display: flex;
-		justify-content: flex-end;
+		justify-content: space-between;
+		align-items: center;
 		background-color: var(--color-bg);
 		z-index: 100;
+		padding: 0px 6px;
+	}
+
+	.logo {
+		align-items: center;
+		font-family: var(--font-decoration);
+		font-size: larger;
+		font-weight: 300;
+	}
+
+	.accent {
+		color: var(--color-theme-1);
 	}
 
 	ul {
 		position: relative;
-		padding: 0 12px;
+		padding: 0px 12px;
 		margin: 0;
 		height: 3em;
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		list-style: none;
-		background: var(--background);
-		background-size: contain;
 	}
 
 	li {
@@ -76,7 +85,7 @@
 		color: var(--color-text);
 		font-weight: 700;
 		font-size: 0.8rem;
-		text-transform: uppercase;
+		/* text-transform: uppercase; */
 		letter-spacing: 0.1em;
 		text-decoration: none;
 		transition: color 0.2s linear;

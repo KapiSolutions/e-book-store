@@ -9,7 +9,7 @@
 	<Navbar />
 	<section class="container">
 		<div class="textContainer">
-			<h1>Twój E-book</h1>
+			<h1>Twój E<span class="accent">-</span>book</h1>
 			<p>
 				Poszerz swoje horyzonty z naszymi e-bookami! Unikalna wiedza w zasięgu jednego kliknięcia!
 			</p>
@@ -27,13 +27,21 @@
 		justify-content: center;
 		flex-direction: column;
 	}
+	h1 {
+		font-family: var(--font-decoration);
+		font-size: 42px;
+		margin-bottom: 16px;
+	}
+	.accent {
+		color: var(--color-theme-1);
+	}
 	.container {
 		position: relative;
 		display: flex;
 		justify-content: space-around;
 		width: 100%;
 		min-height: 80vh;
-		padding-top:100px;
+		padding-top: 100px;
 	}
 
 	.textContainer {
