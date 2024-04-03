@@ -37,6 +37,7 @@
 		display: flex;
 		justify-content: center;
 		flex-direction: column;
+		background: linear-gradient(0deg, rgba(0, 0, 0, 0) 50%, rgb(20, 20, 20)100%);
 	}
 	h1 {
 		font-family: var(--font-decoration);
