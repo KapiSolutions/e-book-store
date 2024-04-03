@@ -93,8 +93,12 @@ button:focus:not(:focus-visible) {
 	outline: none;
 }
 
-@media (min-width: 720px) {
+@media (min-width: 400px) {
 	h1 {
 		font-size: 2.4rem;
+	}
+	.text-column {
+		max-width: 100%;
+		overflow-x: hidden;
 	}
 }

@@ -69,18 +69,26 @@
 	}
 
 	@media screen and (max-width: 600px) {
+		h1 {
+			font-size: 48px;
+		}
 		.container {
 			flex-direction: column-reverse;
 		}
 		.imageContainer {
 			position: absolute;
-			top: 110px;
+			top: 90px;
 			width: 100%;
-			height: 100%;
+			height: 75vh;
+		}
+		.image {
+			height: 75vh;
+			object-fit: cover;
+			object-position: center;
 		}
 		.textContainer {
 			position: relative;
-			top: 100px;
+			top: 60px;
 			z-index: 1;
 		}
 	}
