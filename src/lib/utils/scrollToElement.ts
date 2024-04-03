@@ -3,7 +3,7 @@ export default function scrollToElement(id: string) {
 		const element = document.getElementById(id);
 		if (element) {
 			window.scrollTo({
-				top: element.offsetTop - 20,
+				top: element.offsetTop - 25,
 				behavior: 'smooth'
 			});
 		}
