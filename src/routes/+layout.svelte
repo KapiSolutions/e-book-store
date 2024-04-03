@@ -1,4 +1,5 @@
 <script lang="ts">
+	import Footer from '$lib/components/Footer.svelte';
 	import Header from '../lib/components/Header.svelte';
 	import './styles.css';
 </script>
@@ -8,10 +9,7 @@
 	<main id="main">
 		<slot />
 	</main>
-
-	<footer id="footer">
-		<p>© 2024 <a href="/#">Twój E-book</a></p>
-	</footer>
+	<Footer />
 </div>
 
 <style>
@@ -30,19 +28,5 @@
 		max-width: 64rem;
 		margin: 0 auto;
 		box-sizing: border-box;
-	}
-
-	footer {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		padding: 12px;
-	}
-
-	@media (min-width: 480px) {
-		footer {
-			padding: 12px 0;
-		}
 	}
 </style>

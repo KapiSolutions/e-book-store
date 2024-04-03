@@ -3,6 +3,16 @@
 	import scrollToElement from '$lib/utils/scrollToElement';
 	import Button from './Button.svelte';
 	import Navbar from './Navbar.svelte';
+	import { page } from '$app/stores';
+	import { goto } from '$app/navigation';
+
+	const handleShop = () => {
+		if ($page.url.pathname !== '/') {
+			goto('/#main');
+		} else {
+			scrollToElement('sklep');
+		}
+	};
 </script>
 
 <header>
@@ -11,9 +21,10 @@
 		<div class="textContainer">
 			<h1><span class="accent">.</span>Twój E-book</h1>
 			<p>
-				Poszerz swoje horyzonty z naszymi e-bookami! Unikalna wiedza w zasięgu jednego kliknięcia!
+				Poszerz swoje horyzonty z naszymi <br />E-bookami! Unikalna wiedza w zasięgu jednego
+				kliknięcia!
 			</p>
-			<Button variant="cta" onClick={() => scrollToElement('sklep')}>Zobacz E-booki!</Button>
+			<Button variant="cta" onClick={handleShop}>Zobacz E-booki!</Button>
 		</div>
 		<div class="imageContainer">
 			<img src={landing} alt="Welcome" class="image" />
@@ -26,6 +37,7 @@
 		display: flex;
 		justify-content: center;
 		flex-direction: column;
+		background: linear-gradient(0deg, rgba(0, 0, 0, 0) 50%, rgb(20, 20, 20)100%);
 	}
 	h1 {
 		font-family: var(--font-decoration);
