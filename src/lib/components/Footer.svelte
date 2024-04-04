@@ -2,25 +2,27 @@
 	import emailIcon from '$lib/images/emailIcon.svg';
 	import phoneIcon from '$lib/images/phoneIcon.svg';
 	import pinIcon from '$lib/images/pinIcon.svg';
+	import favIcon from '$lib/images/favIcon.svg';
 </script>
 
 <footer id="footer">
 	<div class="container">
-		<p><strong>Kontakt</strong></p>
+		<img src={favIcon} alt="Twój E-book logo" class="logo" />
+
 		<div>
 			<img src={emailIcon} alt="email" />
 			<p><a href="mailto:twojebook10@gmail.com" class="nodecoration">twojebook10@gmail.com</a></p>
 		</div>
 		<div>
 			<img src={phoneIcon} alt="phone" />
-			<p>+48 572 217 369</p>
+			<p><a href="tel:+48572217369" class="nodecoration">+48 572 217 369</a></p>
 		</div>
 		<div>
 			<img src={pinIcon} alt="phone" />
 			<p>ul. Krasickiego 48A, 32-600 Oświęcim</p>
 		</div>
 	</div>
-	<p>© 2024 <a href="/#">Twój E-book</a></p>
+	<p><small>© 2024 <a href="/#">Twój E-book</a></small></p>
 </footer>
 
 <style>
@@ -34,12 +36,19 @@
 	.container div {
 		display: flex;
 		align-items: center;
-		flex-direction: column;
+		/* flex-direction: column; */
 		text-align: center;
+	}
+	.container div img {
+		display: none;
 	}
 	.nodecoration {
 		text-decoration: none;
 		color: var(--color-text);
+	}
+	.logo {
+		font-family: var(--font-decoration);
+		margin: 16px;
 	}
 	footer {
 		display: flex;
@@ -48,6 +57,9 @@
 		align-items: center;
 		padding: 12px;
 		background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 100%);
+	}
+	a:hover {
+		color: var(--color-theme-1);
 	}
 
 	@media (min-width: 480px) {
@@ -60,6 +72,9 @@
 			flex-direction: row;
 			text-align: center;
 			gap: 6px;
+		}
+		.container div img {
+			display: block;
 		}
 	}
 </style>
