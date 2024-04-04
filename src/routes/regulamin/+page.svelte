@@ -84,22 +84,6 @@
 
 		<ol>
 			<li>
-				Sklep nie prowadzi sprzedaży E-booków na rzecz osób niebędących podatnikami w rozumieniu
-				art. 28a ustawy o podatku od towarów i usług, mających w momencie zakupu miejsce
-				zamieszkania lub stałego pobytu poza terytorium Rzeczypospolitej Polskiej. Kupujący,
-				dokonując zakupu, oświadcza, iż jest podatnikiem w rozumieniu art. 28a ust. 1 ustawy o
-				podatku od towarów i usług lub też, iż ma miejsce zamieszkania lub miejsce stałego pobytu na
-				terytorium Rzeczypospolitej Polskiej. W razie nieprawdziwości tego oświadczenia, Kupujący,
-				który dokonał zakupu, obowiązany jest do naprawienia wszelkich szkód, które Sprzedawca
-				poniósł wskutek nieprawdziwości oświadczenia, w szczególności równowartości podatku od
-				towarów i usług wraz z odsetkami, wszelkich kar, grzywien w postępowaniu podatkowym,
-				karno-skarbowym, mandatowym lub administracyjnym, kosztów pomocy prawnej oraz wszelkich
-				innych szkód, które poniósł Sprzedawca. Sprzedawca może w takim wypadku żądać w
-				szczególności od Kupującego kary umownej w kwocie 2500 zł (dwa tysiące pięćset złotych) oraz
-				dalszego odszkodowania.
-			</li>
-
-			<li>
 				Informacje o E-bookach zamieszczone są na stronie: <a href="https://twojebook.vercel.app"
 					>https://twojebook.vercel.app</a
 				> .
@@ -214,8 +198,8 @@
 			</li>
 
 			<li>
-				Faktura VAT wystawiana jest na wyraźne żądanie Klienta złożone w prywatnej wiadomości e-mail:
-				( <a href="mailto:twojebook10@gmail.com">twojebook10@gmail.com</a> )
+				Faktura VAT wystawiana jest na wyraźne żądanie Klienta złożone w prywatnej wiadomości
+				e-mail: ( <a href="mailto:twojebook10@gmail.com">twojebook10@gmail.com</a> )
 			</li>
 
 			<li>
