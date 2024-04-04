@@ -20,6 +20,6 @@
 <style>
 	div {
 		text-align: center;
-		margin: 16px 0px;
+		margin: 32px 0px;
 	}
 </style>
