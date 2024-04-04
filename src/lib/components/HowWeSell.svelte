@@ -21,7 +21,7 @@
 	<div class="item">
         <p class="itemIdx">#3</p>
 		<SendIcon fill={color} />
-		<p>E-book dostarczymy natychmiast na Twojego maila podanego podczas płatności.</p>
+		<p>Twój E-book dostarczymy natychmiast na maila podanego podczas płatności.</p>
 	</div>
 </div>
 <p>Sprawdź jakie to proste i zdobądź unikalną więdzę oraz umiejętności już dziś!</p>
