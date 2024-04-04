@@ -7,11 +7,16 @@
 	import ProductCard from '$lib/components/ProductCard.svelte';
 	import type { Product } from '$lib/types';
 	import CountDown from '$lib/components/CountDown.svelte';
+	import products from '../../../tmp/products.json';
 
 	const { slug } = $page.params;
 	let product: Product | null;
 	const unsubscribe = productStore.subscribe((value) => {
-		product = value;
+		if (value) {
+			product = value;
+		} else {
+			product = products[0];
+		}
 	});
 
 	onDestroy(() => {
