@@ -32,8 +32,8 @@
 	</span>
 	<div class="buttons">
 		{#if buyMode}
-			<Button onClick={() => goto('/#sklep')} variant="secondary">Wróć</Button>
-			<Button onClick={() => openUrlInNewTab(buyUrl)}>Kup teraz!</Button>
+			<!-- <Button onClick={() => goto('/#sklep')} variant="secondary">Wróć</Button> -->
+			<Button onClick={() => openUrlInNewTab(buyUrl)} pulsing={true}>Kup teraz!</Button>
 		{:else}
 			<Button onClick={handleProduct} variant="secondary">Pokaż opis</Button>
 			<Button onClick={() => openUrlInNewTab(buyUrl)}>Kup teraz!</Button>
@@ -63,7 +63,6 @@
 	}
 	.activePrice {
 		font-size: larger;
-		margin-bottom: 12px;
 		margin-top: 6px;
 	}
 	.oldPrice {
