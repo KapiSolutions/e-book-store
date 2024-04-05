@@ -11,17 +11,28 @@
 
 	const { slug } = $page.params;
 	let product: Product | null;
+	
 	const unsubscribe = productStore.subscribe((value) => {
 		if (value) {
 			product = value;
 		} else {
-			product = products[0];
+			product = products.find((record) => removeQueryString(record.title) === slug) ?? products[0];
 		}
 	});
 
 	onDestroy(() => {
 		unsubscribe();
 	});
+
+	// Title of the product is used as slug for better SEO
+	function removeQueryString(inputString: string): string {
+		const questionMarkIndex = inputString.indexOf('?');
+		if (questionMarkIndex !== -1) {
+			// If '?' sign is found, extract substring before it
+			return inputString.slice(0, questionMarkIndex);
+		}
+		return inputString;
+	}
 </script>
 
 <SEO title={slug} description={`E-book: ${slug}`} />
