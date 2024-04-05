@@ -1,7 +1,7 @@
-import * as fs from 'fs';
 import type { Order } from '$lib/types';
 import { PDFDocument, PDFEmbeddedPage, PDFFont, PDFPage, rgb, StandardFonts } from 'pdf-lib';
-import { ENV } from '$env/static/private';
+import {read} from '$app/server';
+import watermark from '$lib/assets/watermark-1.pdf'
 
 export class ModifyPDF {
 	private pdfDoc: PDFDocument | null = null;
@@ -21,12 +21,7 @@ export class ModifyPDF {
 		this.font = await this.pdfDoc.embedFont(StandardFonts.Helvetica);
 
 		// Get watermark background image
-		const filepath =
-			ENV === 'production'
-				? 'https://twojebook.vercel.app/watermarks/watermark-1.pdf'
-				: './static/watermarks/watermark-1.pdf';
-
-		const watermarkBytes = fs.readFileSync(filepath);
+		const watermarkBytes = await read(watermark).arrayBuffer();
 		const [watermarkImage] = await this.pdfDoc.embedPdf(watermarkBytes);
 
 		// Add watermark to specified doc pages
