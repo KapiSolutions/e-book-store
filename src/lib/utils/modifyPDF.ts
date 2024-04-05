@@ -1,6 +1,7 @@
 import * as fs from 'fs';
 import type { Order } from '$lib/types';
 import { PDFDocument, PDFEmbeddedPage, PDFFont, PDFPage, rgb, StandardFonts } from 'pdf-lib';
+import { ENV } from '$env/static/private';
 
 export class ModifyPDF {
 	private pdfDoc: PDFDocument | null = null;
@@ -19,7 +20,9 @@ export class ModifyPDF {
 		this.pdfDoc = await PDFDocument.load(basePDF);
 		this.font = await this.pdfDoc.embedFont(StandardFonts.Helvetica);
 		// Get watermark background image
-		const watermarkBytes = fs.readFileSync('./src/lib/assets/watermark-1.pdf');
+		const filepath =
+			ENV === 'production' ? '/watermarks/watermark-1.pdf' : './static/watermarks/watermark-1.pdf';
+		const watermarkBytes = fs.readFileSync(filepath);
 		const [watermarkImage] = await this.pdfDoc.embedPdf(watermarkBytes);
 
 		// Add watermark to specified doc pages
