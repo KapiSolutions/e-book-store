@@ -21,7 +21,7 @@ export class ModifyPDF {
 		this.font = await this.pdfDoc.embedFont(StandardFonts.Helvetica);
 		// Get watermark background image
 		const filepath =
-			ENV === 'production' ? '/watermarks/watermark-1.pdf' : './static/watermarks/watermark-1.pdf';
+			ENV === 'production' ? 'public/watermarks/watermark-1.pdf' : './static/watermarks/watermark-1.pdf';
 		const watermarkBytes = fs.readFileSync(filepath);
 		const [watermarkImage] = await this.pdfDoc.embedPdf(watermarkBytes);
 
