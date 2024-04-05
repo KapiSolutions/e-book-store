@@ -19,9 +19,14 @@ export class ModifyPDF {
 		this.client = client;
 		this.pdfDoc = await PDFDocument.load(basePDF);
 		this.font = await this.pdfDoc.embedFont(StandardFonts.Helvetica);
+
 		// Get watermark background image
+		const moduleURL = new URL(import.meta.url);
 		const filepath =
-			ENV === 'production' ? 'public/watermarks/watermark-1.pdf' : './static/watermarks/watermark-1.pdf';
+			ENV === 'production'
+				? `${moduleURL.pathname}/watermarks/watermark-1.pdf`
+				: './static/watermarks/watermark-1.pdf';
+
 		const watermarkBytes = fs.readFileSync(filepath);
 		const [watermarkImage] = await this.pdfDoc.embedPdf(watermarkBytes);
 
