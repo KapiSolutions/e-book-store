@@ -21,10 +21,9 @@ export class ModifyPDF {
 		this.font = await this.pdfDoc.embedFont(StandardFonts.Helvetica);
 
 		// Get watermark background image
-		const moduleURL = new URL(import.meta.url);
 		const filepath =
 			ENV === 'production'
-				? `${moduleURL.pathname}/watermarks/watermark-1.pdf`
+				? 'https://twojebook.vercel.app/watermarks/watermark-1.pdf'
 				: './static/watermarks/watermark-1.pdf';
 
 		const watermarkBytes = fs.readFileSync(filepath);
