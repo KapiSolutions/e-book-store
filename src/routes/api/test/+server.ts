@@ -1,7 +1,12 @@
 import { json } from '@sveltejs/kit';
+import * as fs from 'fs';
 
 export async function GET() {
-
-    const moduleURL = new URL(import.meta.url);
-	return json({ message: moduleURL });
+	try {
+		const filepath = '/watermarks/watermark-1.pdf';
+		fs.readFileSync(filepath);
+		return json({ message: 'Works!' });
+	} catch (error) {
+		return json({ error: error }, { status: 500 });
+	}
 }
