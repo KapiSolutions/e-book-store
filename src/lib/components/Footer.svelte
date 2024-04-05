@@ -1,8 +1,8 @@
 <script>
-	import emailIcon from '$lib/images/emailIcon.svg';
-	import phoneIcon from '$lib/images/phoneIcon.svg';
-	import pinIcon from '$lib/images/pinIcon.svg';
-	import favIcon from '$lib/images/favIcon.svg';
+	import emailIcon from '$lib/assets/images/emailIcon.svg';
+	import phoneIcon from '$lib/assets/images/phoneIcon.svg';
+	import pinIcon from '$lib/assets/images/pinIcon.svg';
+	import favIcon from '$lib/assets/images/favIcon.svg';
 </script>
 
 <footer id="footer">

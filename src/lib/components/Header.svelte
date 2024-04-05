@@ -1,5 +1,5 @@
 <script lang="ts">
-	import landing from '$lib/images/landing.webp';
+	import landing from '$lib/assets/images/landing.webp';
 	import scrollToElement from '$lib/utils/scrollToElement';
 	import Button from './Button.svelte';
 	import Navbar from './Navbar.svelte';
