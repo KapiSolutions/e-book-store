@@ -3,7 +3,7 @@ import * as fs from 'fs';
 
 export async function GET() {
 	try {
-		const filepath = '/watermarks/watermark-1.pdf';
+		const filepath = `${process.cwd()}/watermarks/watermark-1.pdf`;
 		fs.readFileSync(filepath);
 		return json({ message: 'Works!' });
 	} catch (error) {
