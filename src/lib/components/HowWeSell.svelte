@@ -9,17 +9,17 @@
 <HeaderText title="Jak to działa?" />
 <div class="container">
 	<div class="item">
-        <p class="itemIdx">#1</p>
+        <p class="itemIdx">①</p>
 		<PdfIcon fill={color} />
 		<p>Nasze E-booki dostarczane są w pięknie opakowanym pliku PDF.</p>
 	</div>
 	<div class="item">
-        <p class="itemIdx">#2</p>
+        <p class="itemIdx">②</p>
 		<StripeIcon fill={color} />
 		<p>Opłać bezpiecznie zakup za pomocą wybranej metody płatności.</p>
 	</div>
 	<div class="item">
-        <p class="itemIdx">#3</p>
+        <p class="itemIdx">③</p>
 		<SendIcon fill={color} />
 		<p>Twój E-book dostarczymy natychmiast na maila podanego podczas płatności.</p>
 	</div>
@@ -57,10 +57,12 @@
     .itemIdx {
         color: var(--color-theme-1);
         position:absolute;
-        top: -10px;
+        top: -28px;
         right: 10px;
         font-weight: bold;
         opacity: 0.8;
+		font-size: 24px;
+		font-family: var(--font-mono);
         display: none;
     }
 	p {
