@@ -6,9 +6,10 @@
 	export let type: ButtonProps['type'] = 'button';
 	export let disabled: ButtonProps['disabled'] = false;
 	export let loading: ButtonProps['loading'] = false;
+	export let pulsing: ButtonProps['pulsing'] = false;
 </script>
 
-<button {type} on:click={onClick} class={variant} {disabled}>
+<button {type} on:click={onClick} class={`${variant} ${pulsing && 'pulsing'}`} {disabled}>
 	{#if loading}
 		Loading...
 	{:else}
@@ -50,5 +51,18 @@
 	button:hover {
 		transform: scale(1.03);
 		transition: all 0.1s linear;
+	}
+
+	.pulsing {
+		animation: pulse 2.5s infinite cubic-bezier(0.25, 0.5, 0.9, 2.5);
+	}
+
+	@keyframes pulse {
+		from {
+			box-shadow: 0 0 0 0 var(--color-theme-1);
+		}
+		to {
+			box-shadow: 0 0 0 12px rgba(0, 0, 0, 0);
+		}
 	}
 </style>
