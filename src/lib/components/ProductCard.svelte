@@ -27,8 +27,8 @@
 		<img src={imageUrl} alt="E-book cover" class="image" />
 	</div>
 	<span class="price">
-		<p class="oldPrice">{priceOld}.00 zł</p>
-		<p class="activePrice">{price}.00 zł</p>
+		<p class="oldPrice">{priceOld.toFixed(2)} zł</p>
+		<p class="activePrice">{price.toFixed(2)} zł</p>
 	</span>
 	<div class="buttons">
 		{#if buyMode}
@@ -36,7 +36,7 @@
 			<Button onClick={() => openUrlInNewTab(buyUrl)} pulsing={true}>Kup teraz!</Button>
 		{:else}
 			<Button onClick={handleProduct} variant="secondary">Pokaż opis</Button>
-			<Button onClick={() => openUrlInNewTab(buyUrl)}>Kup teraz!</Button>
+			<Button onClick={() => openUrlInNewTab(buyUrl)} pulsing={true}>Kup teraz!</Button>
 		{/if}
 	</div>
 	<p>
