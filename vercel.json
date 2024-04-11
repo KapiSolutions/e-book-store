@@ -1,0 +1,9 @@
+{
+	"crons": [
+		{
+			"id": "keep-alive-render-ebook-api",
+			"path": "/api/cron",
+			"schedule": "*/10 * * * *"
+		}
+	]
+}
