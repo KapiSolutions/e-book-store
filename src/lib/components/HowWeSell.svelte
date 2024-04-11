@@ -1,5 +1,6 @@
 <script lang="ts">
 	import HeaderText from './HeaderText.svelte';
+	import PaymentMethods from './PaymentMethods.svelte';
 	import PdfIcon from './icons/PdfIcon.svelte';
 	import SendIcon from './icons/SendIcon.svelte';
 	import StripeIcon from './icons/StripeIcon.svelte';
@@ -9,17 +10,18 @@
 <HeaderText title="Jak to działa?" />
 <div class="container">
 	<div class="item">
-        <p class="itemIdx">①</p>
+		<p class="itemIdx">①</p>
 		<PdfIcon fill={color} />
 		<p>Nasze E-booki dostarczane są w pięknie opakowanym pliku PDF.</p>
 	</div>
 	<div class="item">
-        <p class="itemIdx">②</p>
+		<p class="itemIdx">②</p>
 		<StripeIcon fill={color} />
 		<p>Opłać bezpiecznie zakup za pomocą wybranej metody płatności.</p>
+		<PaymentMethods />
 	</div>
 	<div class="item">
-        <p class="itemIdx">③</p>
+		<p class="itemIdx">③</p>
 		<SendIcon fill={color} />
 		<p>Twój E-book dostarczymy natychmiast na maila podanego podczas płatności.</p>
 	</div>
@@ -37,7 +39,7 @@
 		margin-bottom: 16px;
 	}
 	.item {
-        position: relative;
+		position: relative;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
@@ -54,17 +56,17 @@
 		border: 1px solid var(--color-theme-1);
 	}
 
-    .itemIdx {
-        color: var(--color-theme-1);
-        position:absolute;
-        top: -28px;
-        right: 10px;
-        font-weight: bold;
-        opacity: 0.8;
+	.itemIdx {
+		color: var(--color-theme-1);
+		position: absolute;
+		top: -28px;
+		right: 10px;
+		font-weight: bold;
+		opacity: 0.8;
 		font-size: 24px;
 		font-family: var(--font-mono);
-        display: none;
-    }
+		display: none;
+	}
 	p {
 		text-align: center;
 	}

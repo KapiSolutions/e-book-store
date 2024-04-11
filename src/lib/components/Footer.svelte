@@ -22,7 +22,8 @@
 			<p>ul. Krasickiego 48A, 32-600 Oświęcim</p>
 		</div>
 	</div>
-	<p><small>© 2024 <a href="/#">Twój E-book</a></small></p>
+	<p class="noMargin"><small>© 2024 <a href="/#">Twój E-book.</a></small></p>
+	<p class="noMargin"><small>WebDesign: <a href="https://www.kapisolutions.pl" target="_blank">Kapisolutions.</a></small></p>
 </footer>
 
 <style>
@@ -57,6 +58,9 @@
 		align-items: center;
 		padding: 12px;
 		background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 100%);
+	}
+	.noMargin {
+		margin: 0;
 	}
 	a:hover {
 		color: var(--color-theme-1);

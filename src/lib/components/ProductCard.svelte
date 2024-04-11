@@ -2,6 +2,7 @@
 	import Button from './Button.svelte';
 	import { goto } from '$app/navigation';
 	import { productStore } from '$lib/stores/productStore';
+	import PaymentMethods from './PaymentMethods.svelte';
 
 	const openUrlInNewTab = (url: string) => {
 		window.open(url, '_blank');
@@ -24,7 +25,7 @@
 <div class="container">
 	<h2>{title}</h2>
 	<div class="imageContainer">
-		<img src={imageUrl} alt="E-book cover" class="image" />
+		<img src={imageUrl} alt={`E-book ${title}`} class="image" />
 	</div>
 	<span class="price">
 		<p class="oldPrice">{priceOld.toFixed(2)} zł</p>
@@ -34,6 +35,7 @@
 		{#if buyMode}
 			<!-- <Button onClick={() => goto('/#sklep')} variant="secondary">Wróć</Button> -->
 			<Button onClick={() => openUrlInNewTab(buyUrl)} pulsing={true}>Kup teraz!</Button>
+			<PaymentMethods />
 		{:else}
 			<Button onClick={handleProduct} variant="secondary">Pokaż opis</Button>
 			<Button onClick={() => openUrlInNewTab(buyUrl)} pulsing={true}>Kup teraz!</Button>
@@ -75,6 +77,9 @@
 	}
 	.buttons {
 		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: center;
 		gap: 16px;
 	}
 </style>
