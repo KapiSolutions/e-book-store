@@ -1,9 +1,10 @@
 import { json, type RequestEvent } from '@sveltejs/kit';
+import { CRON_SECRET } from '$env/static/private';
 
 // Cron job defined in vercel.json (call this route every 10minutes)
 export async function GET({ request }: RequestEvent) {
 	// Authenticate api call
-	if (request.headers.get('Authorization') !== `Bearer ${process.env.CRON_SECRET}`) {
+	if (request.headers.get('Authorization') !== `Bearer ${CRON_SECRET}`) {
 		return json({ error: 'Unauthorized' }, { status: 401 });
 	}
 	// Set response timeout
