@@ -2,7 +2,7 @@
 	import HeaderText from './HeaderText.svelte';
 	import PaymentMethods from './PaymentMethods.svelte';
 	import PdfIcon from './icons/PdfIcon.svelte';
-	import SendIcon from './icons/SendIcon.svelte';
+	import MinuteIcon from './icons/MinuteIcon.svelte';
 	import StripeIcon from './icons/StripeIcon.svelte';
 	const color = 'rgba(170, 170, 170, 0.818)';
 </script>
@@ -22,7 +22,7 @@
 	</div>
 	<div class="item">
 		<p class="itemIdx">③</p>
-		<SendIcon fill={color} />
+		<MinuteIcon fill={color} />
 		<p>Twój E-book dostarczymy natychmiast na maila podanego podczas płatności.</p>
 	</div>
 </div>
