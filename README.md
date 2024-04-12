@@ -1,38 +1,17 @@
-# create-svelte
+<p align="center">
+  <a href="https://twojebook.vercel.app" target="blank"><img src="https://storage.googleapis.com/portfolio-kapisolutions-storage/e-book-store/github.webp" alt="Twój e-book" /></a>
+</p>
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
+### Description
 
-## Creating a project
+This project delivers a simple landing page for selling e-books online. The whole project for the client integrates Stripe for seamless payment processing,  and a <a href="https://github.com/KapiSolutions/e-book-api" alt="e-book-api">Nest.js backend</a> for automated e-book delivery and customization.
 
-If you're seeing this, you've probably already done this step. Congrats!
+## 🛠 Tech Stack
+- SvelteKit
+- TypeScript
+- Vercel
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+[![My Skills](https://skillicons.dev/icons?i=svelte,ts,vercel)](https://skillicons.dev)
 
-# create a new project in my-app
-npm create svelte@latest my-app
-```
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+## 🔗 Links
+[![LiveLink](https://img.shields.io/badge/live_link-020005?style=for-the-badge&logo=awesomelists)](https://twojebook.vercel.app)
