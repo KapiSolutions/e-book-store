@@ -23,7 +23,7 @@
 </script>
 
 <div class="container">
-	<h2>{title}</h2>
+	<h2>{@html title}</h2>
 	<div class="imageContainer">
 		<img src={imageUrl} alt={`E-book ${title}`} class="image" />
 	</div>
@@ -41,9 +41,6 @@
 			<Button onClick={() => openUrlInNewTab(buyUrl)} pulsing={true}>Kup teraz!</Button>
 		{/if}
 	</div>
-	<p>
-		<small>ZAKUP JEST JEDNOZNACZNY Z AKCEPTACJĄ <a href="/regulamin#main">REGULAMINU.</a></small>
-	</p>
 </div>
 
 <style>

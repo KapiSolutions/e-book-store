@@ -8,10 +8,11 @@
 	import type { Product } from '$lib/types';
 	import CountDown from '$lib/components/CountDown.svelte';
 	import products from '../../../tmp/products.json';
+	import OrderInfo from '$lib/components/OrderInfo.svelte';
 
 	const { slug } = $page.params;
 	let product: Product | null;
-	
+
 	const unsubscribe = productStore.subscribe((value) => {
 		if (value) {
 			product = value;
@@ -41,7 +42,7 @@
 	{#if product}
 		<HeaderText title="E-book" />
 		<div class="product">
-			<h2>{product.title}</h2>
+			<h2>{@html product.title}</h2>
 			<div class="imageContainer">
 				<img src={product.imageUrl} alt="E-book cover" class="image" />
 			</div>
@@ -51,6 +52,7 @@
 		</div>
 
 		<ProductCard {...product} buyMode={true} />
+		<OrderInfo />
 		<CountDown />
 	{:else}
 		<div style="text-align: center;">
